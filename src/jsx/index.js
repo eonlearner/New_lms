@@ -144,12 +144,37 @@ import GroupsUsers from './components/Groups/GroupsUsers';
 import GroupCourses from './components/Groups/GroupCourses';
 import GroupFiles from './components/Groups/GroupFiles';
 
+
+//Admin Groups----
+import AdmGroups from './components/AGroups/AdmGroups';
+import AdmAddGroups from './components/AGroups/AdmAddGroups';
+import AdmEditGroups from './components/AGroups/AdmEditGroups';
+import AdmGroupsUsers from './components/AGroups/AdmGroupsUsers';
+import AdmGroupCourses from './components/AGroups/AdmGroupCourses';
+import AdmGroupFiles from './components/AGroups/AdmGroupFiles';
+
+
+//Instructor Groups----
+import InstGroups from './components/IGroups/InstGroups';
+import InstAddGroups from './components/IGroups/InstAddGroups';
+import InstEditGroups from './components/IGroups/InstEditGroups';
+import InstGroupsUsers from './components/IGroups/InstGroupsUsers';
+import InstGroupCourses from './components/IGroups/InstGroupCourses';
+import InstGroupFiles from './components/IGroups/InstGroupFiles';
+
 //Events Engine----
 import Events from './components/EventsEngine/Events';
 import AddNotification from './components/EventsEngine/AddNotification';
 import EditNotification from './components/EventsEngine/EditNotification';
 import CustomizeNotification from "./components/EventsEngine/CustomizeNotification";
 import PendingNotification from "./components/EventsEngine/PendingNotification";
+
+//Admin Events Engine----
+import AdmEvents from './components/AdmEventsEngine/AdmEvents';
+import AdmAddNotification from './components/AdmEventsEngine/AdmAddNotification';
+import AdmEditNotification from './components/AdmEventsEngine/AdmEditNotification';
+import AdmCustomizeNotification from "./components/AdmEventsEngine/AdmCustomizeNotification";
+import AdmPendingNotification from "./components/AdmEventsEngine/AdmPendingNotification";
 
 //Import-Export
 import SuImportUser from './components/ImpExp/SuImportUser';
@@ -183,6 +208,14 @@ import CustomReports from './components/Reports/CustomReports';
 import Infographics from './components/Reports/Infographics';
 
 
+//Admin Reports----
+import AdmReportOverview from './components/AReports/AdmOverview';
+import AdmUserReports from './components/AReports/AdmUserReports';
+import AdmCourseReports from './components/AReports/AdmCourseReports';
+import AdmGroupReports from './components/AReports/AdmGroupReports';
+import AdmInfographics from './components/AReports/AdmInfographics';
+
+
 /////Accounts & Settings----
 import BasicSettings from "./components/AccountSettings/BasicSettings";
 import Certificates from "./components/AccountSettings/Certificates";
@@ -192,6 +225,17 @@ import Gamification from "./components/AccountSettings/Gamifications";
 import Subscription from "./components/AccountSettings/Subscription";
 import Thoms from "./components/AccountSettings/Thoms";
 import UserSettings from "./components/AccountSettings/UserSettings";
+
+
+/////Admin Accounts & Settings----
+import AdmBasicSettings from "./components/AdmAccountSettings/AdmBasicSettings";
+import AdmCertificates from "./components/AdmAccountSettings/AdmCertificates";
+import AdmDomain from "./components/AdmAccountSettings/AdmDomain";
+import AdmEcommerce from "./components/AdmAccountSettings/AdmEcommerce";
+import AdmGamification from "./components/AdmAccountSettings/AdmGamifications";
+import AdmSubscription from "./components/AdmAccountSettings/AdmSubscription";
+import AdmThoms from "./components/AdmAccountSettings/AdmThoms";
+import AdmUserSettings from "./components/AdmAccountSettings/AdmUserSettings";
 
 
 /////Trainings----
@@ -213,10 +257,21 @@ import VirtualUsers from "./components/Trainings/VirtualUsers";
 import Calender from './components/Calender/Calender';
 import AddCEvents from './components/Calender/AddCEvent';
 
+//Learner Calenders----
+import LearnCalender from './components/LCalender/LearnCalender';
+import LearnAddCEvents from './components/LCalender/LearnAddCEvent';
+
 //Discussions-----
 import Discussions from "./components/Discussion/Discussion";
 import AddDiscussion from "./components/Discussion/AddDiscussions";
 import UserDiscussion from "./components/Discussion/UserDiscussion"
+
+
+//Learner Discussions-----
+import LearnDiscussions from "./components/LDiscussion/LearnDiscussion";
+import LearnAddDiscussion from "./components/LDiscussion/LearnAddDiscussions";
+import LearnUserDiscussion from "./components/LDiscussion/LearnUserDiscussion"
+
 
 /////Demo
 import Theme1 from "./components/Dashboard/Demo/Theme1";
@@ -457,6 +512,25 @@ const Markup = () => {
     { url: "group-courses", component: GroupCourses },
     { url: "group-files", component: GroupFiles },
 
+
+    // Admin Groups -----
+    { url: "adm_groups", component: AdmGroups },
+    { url: "adm_add-groups", component: AdmAddGroups },
+    { url: "adm_edit-groups", component: AdmEditGroups },
+    { url: "adm_groups-users", component: AdmGroupsUsers },
+    { url: "adm_group-courses", component: AdmGroupCourses },
+    { url: "adm_group-files", component: AdmGroupFiles },
+
+    
+    // Instructor Groups -----
+    { url: "inst_groups", component: InstGroups },
+    { url: "inst_add-groups", component: InstAddGroups },
+    { url: "inst_edit-groups", component: InstEditGroups },
+    { url: "inst_groups-users", component: InstGroupsUsers },
+    { url: "inst_group-courses", component: InstGroupCourses },
+    { url: "inst_group-files", component: InstGroupFiles },
+
+
     // Events -----
     { url: "events", component: Events },
     { url: "add-events", component: AddNotification },
@@ -464,6 +538,15 @@ const Markup = () => {
     { url: "customize-system-notification", component: CustomizeNotification },
     { url: "pending-notification", component: PendingNotification },
 	
+    
+    //Admin Events -----
+    { url: "adm_events", component: AdmEvents },
+    { url: "adm_add-events", component: AdmAddNotification },
+    { url: "adm_edit-events", component: AdmEditNotification },
+    { url: "adm_customize-system-notification", component: AdmCustomizeNotification },
+    { url: "adm_pending-notification", component: AdmPendingNotification },
+
+
     //Import-Export
     { url: "su-import-user", component: SuImportUser },
     { url: "su-export-user", component: SuExportUser },
@@ -496,6 +579,14 @@ const Markup = () => {
     { url: "custom-reports", component: CustomReports },
     { url: "infographics", component: Infographics },
 
+    //Admin Reports -----
+    { url: "adm_reports-overview", component: AdmReportOverview },
+    { url: "adm_user-reports", component: AdmUserReports },
+    { url: "adm_course-reports", component: AdmCourseReports },
+    { url: "adm_group-reports", component: AdmGroupReports },
+    { url: "adm_infographics", component: AdmInfographics },
+
+
     /////Accounts & Settings----
     { url: "basic-settings", component: BasicSettings },
     { url: "certificates", component: Certificates },
@@ -505,6 +596,17 @@ const Markup = () => {
     { url: "subscriptions", component: Subscription },
     { url: "thoms-page", component: Thoms },
     { url: "user-settings", component: UserSettings },
+
+    
+    /////Admin Accounts & Settings----
+    { url: "adm_basic-settings", component: AdmBasicSettings },
+    { url: "adm_certificates", component: AdmCertificates },
+    { url: "adm_domains", component: AdmDomain },
+    { url: "adm_ecommerce", component: AdmEcommerce },
+    { url: "adm_gamification", component: AdmGamification },
+    { url: "adm_subscriptions", component: AdmSubscription },
+    { url: "adm_thoms-page", component: AdmThoms },
+    { url: "adm_user-settings", component: AdmUserSettings },
 
     /////Trainings-----
     { url: "classroom", component: Classrooms },
@@ -525,13 +627,23 @@ const Markup = () => {
     { url: "add-c-event", component: AddCEvents },
     { url: "private-address", component: PrivateAddress },
 
+    //Learner Calenders -----
+    { url: "learn_calender", component: LearnCalender },
+    { url: "learn_add-c-event", component: LearnAddCEvents },
+
     // Discussions -----
     { url: "discussion", component: Discussions },
     { url: "add-Discussion", component: AddDiscussion },
     { url: "user-Discussion", component: UserDiscussion },
     { url: "st-profile", component: Profile },
 
-	/////Demo
+    //Learner Discussions -----
+    { url: "learn_discussion", component: LearnDiscussions },
+    { url: "learn_add-Discussion", component: LearnAddDiscussion },
+    { url: "learn_user-Discussion", component: LearnUserDiscussion },
+    
+
+	  ///Demo
     { url: "secondary-sidebar", component: Theme1 },
     { url: "mini-primary-sidebar", component: Theme2 },
     { url: "nav-header", component: Theme3 },

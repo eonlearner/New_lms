@@ -158,9 +158,21 @@ const SideBar = () => {
 		"groups",
 		"add-groups",
 	],
+	agroups = [
+		"adm_groups",
+		"adm_add-groups",
+	],
+	igroups = [
+		"inst_groups",
+		"inst_add-groups",
+	],
 	events = [
 		"events",
 		"add-events",
+	],
+	aevents = [
+		"adm_events",
+		"adm_add-events",
 	],
 	instructor=[
 		"instructor-dashboard",
@@ -185,6 +197,13 @@ const SideBar = () => {
 		"custom-reports",
 		"infographics",
 	],
+	areports = [
+		"adm_reports-overview",
+		"adm_user-reports",
+		"adm_course-reports",
+		"adm_group-reports",
+		"adm_infographics",
+	],	
 	accountsettings = [
 		"basic-settings",
 		"certificates",
@@ -192,8 +211,18 @@ const SideBar = () => {
 		"ecommerce",
 		"gamification",
 		"subscriptions",
-		"themmes-page",
+		"thoms-page",
 		"user-settings",
+	],	
+	admaccountsettings = [
+		"adm_basic-settings",
+		"adm_certificates",
+		"adm_domains",
+		"adm_ecommerce",
+		"adm_gamification",
+		"adm_subscriptions",
+		"adm_thoms-page",
+		"adm_user-settings",
 	],
 	trainings =[
 		"classroom",
@@ -211,6 +240,10 @@ const SideBar = () => {
 	discussion = [
 		"discussion",
 		"add-discussion",
+	],
+	ldiscussion = [
+		"learn_discussion",
+		"learn_add-discussion",
 	],
     app = [
       "app-profile",
@@ -433,7 +466,7 @@ const SideBar = () => {
 					<li><Link className={`${path === "ecommerce" ? "mm-active" : ""}`} to="/ecommerce">E-commerce</Link></li>
 					<li><Link className={`${path === "gamification" ? "mm-active" : ""}`} to="/gamification">Gamifications</Link></li>
 					<li><Link className={`${path === "subscriptions" ? "mm-active" : ""}`} to="/subscriptions">Subscription</Link></li>
-					<li><Link className={`${path === "/thoms-page" ? "mm-active" : ""}`} to="/thoms-page">Themes</Link></li>
+					<li><Link className={`${path === "thoms-page" ? "mm-active" : ""}`} to="/thoms-page">Themes</Link></li>
 					<li><Link className={`${path === "user-settings" ? "mm-active" : ""}`} to="/user-settings">Users Settings</Link></li>
 				</ul>
 			</li>
@@ -477,49 +510,49 @@ const SideBar = () => {
 						<li><Link className={`${path === "adm_courses" ? "mm-active" : ""}`} to="/adm_courses">Course Store</Link></li>
 					</ul>
 				</li>
-				<li className={`${groups.includes(path) ? "mm-active" : ""}`}>
+				<li className={`${agroups.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#" >
 					<i className="bi bi-people"></i>
 					<span className="nav-text">GROUPS</span>
 				</Link>
 				<ul>
-					<li><Link className={`${path === "groups" ? "mm-active" : ""}`} to="/groups">Groups</Link></li>
-					<li><Link className={`${path === "add-groups" ? "mm-active" : ""}`} to="/add-groups">Add Groups</Link></li>
+					<li><Link className={`${path === "adm_groups" ? "mm-active" : ""}`} to="/adm_groups">Groups</Link></li>
+					<li><Link className={`${path === "adm_add-groups" ? "mm-active" : ""}`} to="/adm_add-groups">Add Groups</Link></li>
 				</ul>
 			</li>
-			<li className={`${events.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${aevents.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#" >
 					<i className="bi bi-calendar-check"></i>
 					<span className="nav-text">EVENT ENGINE</span>
 				</Link>
 				<ul>
-					<li><Link className={`${path === "events" ? "mm-active" : ""}`} to="/events">Events</Link></li>
-					<li><Link className={`${path === "add-events" ? "mm-active" : ""}`} to="/add-events">Add Notification</Link></li>
+					<li><Link className={`${path === "adm_events" ? "mm-active" : ""}`} to="/adm_events">Events</Link></li>
+					<li><Link className={`${path === "adm_add-events" ? "mm-active" : ""}`} to="/adm_add-events">Add Notification</Link></li>
 				</ul>
 			</li>
-			<li className={`${reports.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${areports.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i class="bi bi-graph-up"></i> 
 					<span className="nav-text">REPORTS</span></Link>
 				<ul>
-					<li><Link className={`${path === "reports-overview" ? "mm-active" : ""}`} to="/reports-overview">Overview</Link></li>
-					<li><Link className={`${path === "user-reports" ? "mm-active" : ""}`} to="/user-reports">User Reports</Link></li>
-					<li><Link className={`${path === "course-reports" ? "mm-active" : ""}`} to="/course-reports">Course Reports</Link></li>
-					<li><Link className={`${path === "group-reports" ? "mm-active" : ""}`} to="/group-reports">Group Reports</Link></li>
-					<li><Link className={`${path === "infographics" ? "mm-active" : ""}`} to="/infographics">Infographics</Link></li>
+					<li><Link className={`${path === "adm_reports-overview" ? "mm-active" : ""}`} to="/adm_reports-overview">Overview</Link></li>
+					<li><Link className={`${path === "adm_user-reports" ? "mm-active" : ""}`} to="/adm_user-reports">User Reports</Link></li>
+					<li><Link className={`${path === "adm_course-reports" ? "mm-active" : ""}`} to="/adm_course-reports">Course Reports</Link></li>
+					<li><Link className={`${path === "adm_group-reports" ? "mm-active" : ""}`} to="/adm_group-reports">Group Reports</Link></li>
+					<li><Link className={`${path === "adm_infographics" ? "mm-active" : ""}`} to="/adm_infographics">Infographics</Link></li>
 				</ul>
 			</li>
-			<li className={`${accountsettings.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${admaccountsettings.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i className="bi bi-gear-fill"></i>
 					<span className="nav-text">Account & Setting</span></Link>
 				<ul>
-					<li><Link className={`${path === "basic-settings" ? "mm-active" : ""}`} to="/basic-settings">Basic Settings</Link></li>
-					<li><Link className={`${path === "certificates" ? "mm-active" : ""}`} to="/certificates">Certificates</Link></li>
-					<li><Link className={`${path === "domains" ? "mm-active" : ""}`} to="/domains">Domain</Link></li>
-					<li><Link className={`${path === "ecommerce" ? "mm-active" : ""}`} to="/ecommerce">E-commerce</Link></li>
-					<li><Link className={`${path === "gamification" ? "mm-active" : ""}`} to="/gamification">Gamifications</Link></li>
-					<li><Link className={`${path === "subscriptions" ? "mm-active" : ""}`} to="/subscriptions">Subscription</Link></li>
-					<li><Link className={`${path === "/thoms-page" ? "mm-active" : ""}`} to="/thoms-page">Themes</Link></li>
-					<li><Link className={`${path === "user-settings" ? "mm-active" : ""}`} to="/user-settings">Users Settings</Link></li>
+					<li><Link className={`${path === "adm_basic-settings" ? "mm-active" : ""}`} to="/adm_basic-settings">Basic Settings</Link></li>
+					<li><Link className={`${path === "adm_certificates" ? "mm-active" : ""}`} to="/adm_certificates">Certificates</Link></li>
+					<li><Link className={`${path === "adm_domains" ? "mm-active" : ""}`} to="/adm_domains">Domain</Link></li>
+					<li><Link className={`${path === "adm_ecommerce" ? "mm-active" : ""}`} to="/adm_ecommerce">E-commerce</Link></li>
+					<li><Link className={`${path === "adm_gamification" ? "mm-active" : ""}`} to="/adm_gamification">Gamifications</Link></li>
+					<li><Link className={`${path === "adm_subscriptions" ? "mm-active" : ""}`} to="/adm_subscriptions">Subscription</Link></li>
+					<li><Link className={`${path === "adm_thoms-page" ? "mm-active" : ""}`} to="/adm_thoms-page">Themes</Link></li>
+					<li><Link className={`${path === "adm_user-settings" ? "mm-active" : ""}`} to="/adm_user-settings">Users Settings</Link></li>
 				</ul>
 			</li>
 		</ul>
@@ -555,14 +588,14 @@ const SideBar = () => {
 						<li><Link className={`${path === "add-courses" ? "mm-active" : ""}`} to="/course-reports">REPORTS</Link></li>
 					</ul>
 				</li>
-				<li className={`${groups.includes(path) ? "mm-active" : ""}`}>
+				<li className={`${igroups.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#" >
 					<i className="bi bi-people"></i>
 					<span className="nav-text">GROUPS</span>
 				</Link>
 				<ul>
-					<li><Link className={`${path === "groups" ? "mm-active" : ""}`} to="/groups">Groups</Link></li>
-					<li><Link className={`${path === "add-groups" ? "mm-active" : ""}`} to="/add-groups">Add Groups</Link></li>
+					<li><Link className={`${path === "inst_groups" ? "mm-active" : ""}`} to="/inst_groups">Groups</Link></li>
+					<li><Link className={`${path === "inst_add-groups" ? "mm-active" : ""}`} to="/inst_add-groups">Add Groups</Link></li>
 				</ul>
 			</li>
 			<li className={`${trainings.includes(path) ? "mm-active" : ""}`}>
@@ -627,10 +660,10 @@ const SideBar = () => {
 					<li><Link className={`${path === "virtual-training" ? "mm-active" : ""}`} to="/virtual-training">Virtual Trainings</Link></li>
 				</ul>
 			</li>
-			<li className={`${discussion.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${ldiscussion.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i className="bi bi-chat-quote-fill"></i> <span className="nav-text">Discussions</span></Link>
 				<ul>
-					<li><Link className={`${path === "discussion" ? "mm-active" : ""}`} to="/discussion">Discussion</Link></li>
+					<li><Link className={`${path === "learn_discussion" ? "mm-active" : ""}`} to="/learn_discussion">Discussion</Link></li>
 				</ul>
 			</li>
 			<li className={`${calender.includes(path) ? "mm-active" : ""}`}>
@@ -666,10 +699,10 @@ const SideBar = () => {
 					<li><Link className={`${path === "/user-certificates" ? "mm-active" : ""}`} to="/user-certificates">Certificates</Link></li>
 				</ul>
 			</li>
-			<li className={`${discussion.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${ausers.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i className="bi bi-hourglass-split"></i> <span className="nav-text">Timeline</span></Link>
 				<ul>
-					<li><Link className={`${path === "discussion" ? "mm-active" : ""}`} to="/discussion">Timeline</Link></li>
+					<li><Link className={`${path === "ad-user-timeline" ? "mm-active" : ""}`} to="/ad-user-timeline">Timeline</Link></li>
 				</ul>
 			</li>
 		</ul>
