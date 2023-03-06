@@ -102,6 +102,15 @@ const SideBar = () => {
 		"calender",
 		"groups",
 	],
+	learnfiles = [
+		"learn-files",
+	],
+	learncertificate = [
+		"learn-certificate",
+	],
+	learntimeline = [
+		"learn-timeline",
+	],
 	users = [
 		"users-list",
 		"add-user",
@@ -498,8 +507,7 @@ const SideBar = () => {
 					<li><Link className={`${path === "ad-user-progress" ? "mm-active" : ""}`} to="/ad-user-progress"> User Progress</Link></li>
 					<li><Link className={`${path === "ad-user-infographic" ? "mm-active" : ""}`} to="/ad-user-infographic"> User Infographics</Link></li>
 					</ul>
-				</li>
-				<li className={`${admcourses.includes(path) ? "mm-active" : ""}`}>
+				</li>				<li className={`${admcourses.includes(path) ? "mm-active" : ""}`}>
 					<Link className="has-arrow" to="#" >
 						<i className="bi bi-book"></i>
 						<span className="nav-text">COURSES</span>
@@ -508,6 +516,10 @@ const SideBar = () => {
 						<li><Link className={`${path === "adm_courses-info" ? "mm-active" : ""}`} to="/adm_courses-info">Courses</Link></li>
 						<li><Link className={`${path === "adm_add-courses" ? "mm-active" : ""}`} to="/adm_add-courses">Add Courses</Link></li>
 						<li><Link className={`${path === "adm_courses" ? "mm-active" : ""}`} to="/adm_courses">Course Store</Link></li>
+						<li><Link className={`${path === "adm_users_course_progress" ? "mm-active" : ""}`} to="/adm_users_course_progress">USER & PROGRESS</Link></li>
+						<li><Link className={`${path === "adm_course_files" ? "mm-active" : ""}`} to="/adm_course_files">FILES</Link></li>
+						<li><Link className={`${path === "adm_rules-path" ? "mm-active" : ""}`} to="/adm_rules-path">RULES & PATH</Link></li>
+						<li><Link className={`${path === "adm_course_overview" ? "mm-active" : ""}`} to="/adm_course_overview">REPORTS</Link></li>
 					</ul>
 				</li>
 				<li className={`${agroups.includes(path) ? "mm-active" : ""}`}>
@@ -687,22 +699,22 @@ const SideBar = () => {
 					<li><Link className={`${path === "groups" ? "mm-active" : ""}`} to="/groups">Groups</Link></li>
 				</ul>
 			</li>
-			<li className={`${discussion.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${learnfiles.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i className="bi bi-file-earmark-zip"></i> <span className="nav-text">Files</span></Link>
 				<ul>
-					<li><Link className={`${path === "discussion" ? "mm-active" : ""}`} to="/discussion">Files</Link></li>
+					<li><Link className={`${path === "learn-files" ? "mm-active" : ""}`} to="/learn-files">Files</Link></li>
 				</ul>
 			</li>
-			<li className={`${discussion.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${learncertificate.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i className="bi bi-award"></i> <span className="nav-text">Certificates</span></Link>
 				<ul>
-					<li><Link className={`${path === "/user-certificates" ? "mm-active" : ""}`} to="/user-certificates">Certificates</Link></li>
+					<li><Link className={`${path === "learn-certificate" ? "mm-active" : ""}`} to="/learn-certificate">Certificates</Link></li>
 				</ul>
 			</li>
-			<li className={`${ausers.includes(path) ? "mm-active" : ""}`}>
+			<li className={`${learntimeline.includes(path) ? "mm-active" : ""}`}>
 				<Link className="has-arrow" to="#"> <i className="bi bi-hourglass-split"></i> <span className="nav-text">Timeline</span></Link>
 				<ul>
-					<li><Link className={`${path === "ad-user-timeline" ? "mm-active" : ""}`} to="/ad-user-timeline">Timeline</Link></li>
+					<li><Link className={`${path === "learn-timeline" ? "mm-active" : ""}`} to="/learn-timeline">Timeline</Link></li>
 				</ul>
 			</li>
 		</ul>

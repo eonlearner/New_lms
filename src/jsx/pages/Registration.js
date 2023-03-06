@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { connect, useDispatch } from 'react-redux';
 import {
-    loadingToggleAction,
+    confirmedSignupAction,
     signupAction,
 } from '../../store/actions/AuthActions';
 import { useHistory } from "react-router-dom";
@@ -42,8 +42,8 @@ function Register(props) {
 		history.push("/login");
         setErrors(errorObj);
         if (error) return;
-        dispatch(loadingToggleAction(true));
-        dispatch(signupAction(email, password, props.history));
+        dispatch(confirmedSignupAction(true));
+        dispatch(signupAction(name, email, password, confPassword, props.history));
     }
 	return (
 		<div className="authincation h-100 p-meddle">

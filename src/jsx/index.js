@@ -25,6 +25,16 @@ import Inst from './components/Instructon/Inst'
 
 //Learner----
 import Learn from './components/Learner/Learn'
+
+//Learn 
+import LearnerFiles from "./components/Learn/LearnFiles/LearnerFiles";
+
+// Learn Certificate
+import LearnerCertificate from "./components/Learn/LearnCertificate/LearnerCertificate";
+
+//Learn Timeline
+import LearnerTimeline from "./components/Learn/LearnTimeline/LearnerTimeline";
+
 //Users----
 import Users from './components/Users/Users';
 import AddUser from './components/Users/AddUser';
@@ -386,6 +396,16 @@ const Markup = () => {
 
     /// Instructor
     { url: "learn-dash", component: Learn },
+
+
+    // Learn Files
+    { url: "learn-files", component: LearnerFiles },
+
+    // Learn Certificate
+    { url: "learn-certificate", component: LearnerCertificate },
+
+    // Learn Timeline
+    { url: "learn-timeline", component: LearnerTimeline },
 
 
     //Users---
